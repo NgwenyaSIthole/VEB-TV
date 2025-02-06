@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE VOICE AND EYE OF BHAMBATHA INC.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-tv"></i> THE VOICE AND EYE OF BHAMBATHA INC.</h1>
+    </header>
+    
+    <main>
+      <section id="platforms">
+        <div class="search-container">
+          <input type="text" id="searchBar" placeholder="Search channels...">
+          <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="filters">
+          <select id="regionFilter">
+            <option value="">All Regions</option>
+          </select>
+          <select id="languageFilter">
+            <option value="">All Languages</option>
+          </select>
+          <!-- Category list will be dynamically inserted here by UIManager -->
+        </div>
+
+        <ul id="platformList">
+          <!-- Platforms will be dynamically inserted here -->
+        </ul>
+      </section>
+
+      <section id="channels">
+        <h2>Channels</h2>
+        <ul id="channelList"></ul>
+      </section>
+
+      <section id="player">
+        <div id="videoContainer">
+          <video id="videoPlayer" controls></video>
+          <video id="shakaPlayer" controls></video>
+        </div>
+        <div id="channelInfo"></div>
+        <div id="controls">
+          <button id="previousChannel" title="Previous Channel">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <button id="playPause" title="Play/Pause">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="nextChannel" title="Next Channel">
+            <i class="fas fa-step-forward"></i>
+          </button>
+          <button id="lastChannel" title="Previous Channel">
+            <i class="fas fa-history"></i>
+          </button>
+          <input type="range" id="volume" min="0" max="100" value="100">
+          <button id="fullscreen" title="Fullscreen">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+        <div id="program-guide">
+          <h3>Program Schedule</h3>
+          <ul id="schedule-list"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
